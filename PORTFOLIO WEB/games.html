@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Algarra Medina - Portfolio web Juegos</title>
+    <script src="../PORTFOLIO WEB/src/js/script.js"></script></scrip>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../PORTFOLIO WEB/src/css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container__header">	
+            <div class="logo">
+                <img src="../PORTFOLIO WEB/src/media/icono.png" alt="logo">
+            </div>
+
+            <div class="menu">
+                <nav class="navbar button__cover">
+                    <ul>
+                        <li class="btn_01"><a href="../PORTFOLIO WEB/index.html">Home</a></li>
+                        <li class="btn_01"><a href="../PORTFOLIO WEB/index.html">About</a></li>
+                        <li class="btn_01"><a href="../PORTFOLIO WEB/index.html">Projects</a></li>
+                        <li class="btn_01"><a href="../PORTFOLIO WEB/index.html">Contact</a></li>
+                        <li class="btn_01"><a href="../PORTFOLIO WEB/games.html">Play</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+        </div>
+    </header>
+    <main>
+        <hr>
+        <h1 class="title">✦ Memory game ✦</h1>
+        <table class="cover-game">
+            <thead>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+        </table>
+        <div id = puntuacion class="title">   
+        </div>
+        <div id="bot">
+            <button class="btn_02" onclick="iniciaGame(); inicializaJuego(); dibujaJuegoMemoriaInicial()">Reiniciar Juego</button>
+        </div>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="social-icons-container">
+            <a href="https://www.linkedin.com/in/andrea-algarra-medina-0b4843211/" target="_blank" class="social-icon"></a>
+            <a href="https://www.behance.net/andreaalgarra" target="_blank" class="social-icon"></a>
+            <a href="https://www.instagram.com/almendra_designs/" target="_blank" class="social-icon"></a>
+        </div>
+        <ul class="footer-menu-container">
+            <li class="menu-item"><a href="../PORTFOLIO WEB/index.html">Home</a></li>
+            <li class="menu-item"><a href="../PORTFOLIO WEB/index.html">About</a></li>
+            <li class="menu-item"><a href="../PORTFOLIO WEB/index.html">Projects</a></li>
+            <li class="menu-item"><a href="../PORTFOLIO WEB/index.html">Contact</a></li>
+            <li class="menu-item"><a href="../PORTFOLIO WEB/games.html">Play</a></li>
+        </ul>
+        <span class="copyright">&copy; 2023 Andrea Algarra Medina. Grado en Diseño y Tecnologías Creativas.</span>
+    </footer>
+    <script>
+        iniciaGame()
+        inicializaJuego()
+        dibujaJuegoMemoriaInicial()
+
+        //Hacer la tabla responsive si se detecta cambio en el tamaño de la pantalla
+        window.onresize = resize;
+        function resize()
+        {
+            dibujaJuegoMemoriaInicial();
+            actualizaTablero();
+        }
+    </script>
+</body>
